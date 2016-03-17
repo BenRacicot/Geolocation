@@ -11,16 +11,13 @@ else
 
 
 
-<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
-Geo = function(){
-=======
 function Geo(){
->>>>>>> Updated readme
     this.lat = lat;
     this.lon = lon;
     // check if we have geo already 
     this.hasGeo = (typeof(lat) === 'number') ? true : false; 
 }
+
 
 Geo.prototype = {
 
@@ -53,10 +50,7 @@ Geo.prototype = {
                 { 
                     self.hasGeo = true;
                     sessionStorage.setItem('geoStatus', 'success');    
-<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
-=======
-                    sessionStorage.setItem('geoFail', null);    
->>>>>>> Updated readme
+                    sessionStorage.setItem('geoFail', null);
                 } 
 
                 self.ready();
@@ -148,13 +142,13 @@ geo.ready = function () {
 
     // check hasGeo before trying to use .lat and .lon
     if ( geo.hasGeo ){ 
-<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
+
         console.log('Lat: ' + geo.lat);
         console.log('Lon: ' + geo.lon);
     }
 
 }
-=======
+
     	var h2 = document.querySelector('.geo');
     	var latitude = document.createElement('P');
     		latitude.className = 'latitude';
@@ -172,15 +166,3 @@ geo.ready = function () {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> Updated readme
