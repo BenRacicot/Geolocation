@@ -130,39 +130,22 @@ Geo.prototype = {
 
 // Testing 
 
-// New class instance
+// 1: New class instance
 var geo = new Geo();
 
-// fire up geolocation
+// 2: fire up geolocation
 geo.location();
 
+// 3: 
 // geo.ready only fires once geolocation's position object is available'
 // otherwise you might be trying to use position data before user allows access
 geo.ready = function () {
 
-    // check hasGeo before trying to use .lat and .lon
+    // 4: check hasGeo before trying to use .lat and .lon
     if ( geo.hasGeo ){ 
-
         console.log('Lat: ' + geo.lat);
         console.log('Lon: ' + geo.lon);
     }
 
 }
 
-    	var h2 = document.querySelector('.geo');
-    	var latitude = document.createElement('P');
-    		latitude.className = 'latitude';
-    	var longitude = document.createElement('P');
-    		longitude.className = 'longitude';
-
-    	h2.appendChild(latitude);
-    	h2.appendChild(longitude);
-
-    	latitude.textContent = geo.lat;
-    	longitude.textContent = geo.lon;
-
-        console.log('Lat: ' + geo.lat);
-        console.log('Lon: ' + geo.lon);
-    }
-
-}
