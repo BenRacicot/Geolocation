@@ -1,4 +1,5 @@
 
+// Check if there is a lat/lon previously logged on page load
 if(sessionStorage.lat && sessionStorage.lon){   
     var lat = Number(sessionStorage.getItem('lat'));
     var lon = Number(sessionStorage.getItem('lon'));
@@ -10,7 +11,11 @@ else
 
 
 
+<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
 Geo = function(){
+=======
+function Geo(){
+>>>>>>> Updated readme
     this.lat = lat;
     this.lon = lon;
     // check if we have geo already 
@@ -48,6 +53,10 @@ Geo.prototype = {
                 { 
                     self.hasGeo = true;
                     sessionStorage.setItem('geoStatus', 'success');    
+<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
+=======
+                    sessionStorage.setItem('geoFail', null);    
+>>>>>>> Updated readme
                 } 
 
                 self.ready();
@@ -125,8 +134,6 @@ Geo.prototype = {
 }
 
 
-
-
 // Testing 
 
 // New class instance
@@ -135,15 +142,45 @@ var geo = new Geo();
 // fire up geolocation
 geo.location();
 
-
 // geo.ready only fires once geolocation's position object is available'
 // otherwise you might be trying to use position data before user allows access
 geo.ready = function () {
 
     // check hasGeo before trying to use .lat and .lon
     if ( geo.hasGeo ){ 
+<<<<<<< dfa98c7f80b4aa1d62550af1752094d1dae50f3a
         console.log('Lat: ' + geo.lat);
         console.log('Lon: ' + geo.lon);
     }
 
 }
+=======
+    	var h2 = document.querySelector('.geo');
+    	var latitude = document.createElement('P');
+    		latitude.className = 'latitude';
+    	var longitude = document.createElement('P');
+    		longitude.className = 'longitude';
+
+    	h2.appendChild(latitude);
+    	h2.appendChild(longitude);
+
+    	latitude.textContent = geo.lat;
+    	longitude.textContent = geo.lon;
+
+        console.log('Lat: ' + geo.lat);
+        console.log('Lon: ' + geo.lon);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Updated readme
